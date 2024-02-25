@@ -83,10 +83,10 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	GRASS_SPRITE = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\Tilemap_Grass.png");
-	TREE_SPRITE = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\Tilemap_Tree.png");
-	HEART_FULL_SPRITE = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\heart_full.png");
-	HEART_EMPTY_SPRITE = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\heart_empty.png");
+	GRASS_SPRITE = loadSprite(renderer, "data\\Tilemap_Grass.png");
+	TREE_SPRITE = loadSprite(renderer, "data\\Tilemap_Tree.png");
+	HEART_FULL_SPRITE = loadSprite(renderer, "data\\heart_full.png");
+	HEART_EMPTY_SPRITE = loadSprite(renderer, "data\\heart_empty.png");
 
 	if ((GRASS_SPRITE == NULL) || (TREE_SPRITE == NULL) || (HEART_EMPTY_SPRITE == NULL) || (HEART_FULL_SPRITE == NULL))
 	{
@@ -113,12 +113,12 @@ int main(int argc, char* argv[])
 
 	player = loadPlayer();
 	spawn(&player, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
-	player.sprite = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\Tilemap_Bird.png");
+	player.sprite = loadSprite(renderer, "data\\Tilemap_Bird.png");
 
 	bool hasFired = false;
 	int activeArrows = 0;
 	struct Projectile arrows[8];
-	ARROW_SPRITE = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\Tilemap_Arrow.png");
+	ARROW_SPRITE = loadSprite(renderer, "data\\Tilemap_Arrow.png");
 
 	if ((ARROW_SPRITE == NULL) || (player.sprite == NULL))
 	{
@@ -362,7 +362,7 @@ int main(int argc, char* argv[])
 			{
 				world.enemy[i] = loadMinion();
 				
-				world.enemy[i].sprite = loadSprite(renderer, "C:\\Users\\fruct\\Documents\\VRM\\Project\\data\\Tilemap_Minion.png");
+				world.enemy[i].sprite = loadSprite(renderer, "data\\Tilemap_Minion.png");
 				world.enemy[i].spawned = true;
 				world.enemies++;
 
